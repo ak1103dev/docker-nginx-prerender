@@ -44,7 +44,7 @@ http {
       }
 
       if ($prerender = 1) {
-        rewrite .* /$scheme://$host$request_uri? break;
+        rewrite .* /https://$host$request_uri? break;
         proxy_pass http://prerender;
       }
 
